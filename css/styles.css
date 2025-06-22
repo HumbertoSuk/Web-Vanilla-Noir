@@ -1,0 +1,37 @@
+:root {
+    --color-fondo: #ffffff;
+    --color-texto: #121212;
+    --color-card: rgba(255, 255, 255, 0.2);
+  }
+  
+  [data-theme="dark"] {
+    --color-fondo: #121212;
+    --color-texto: #ffffff;
+    --color-card: rgba(0, 0, 0, 0.4);
+  }
+
+  body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+#Pagina-principal {
+    text-align: justify;
+    font-size: 18px;
+
+}
+
+#imagen-article {
+    max-width: 300px;
+    height: auto;
+}
+
+  #article-grid-main {
+    background: var(--color-card);
+    color: var(--color-texto);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
