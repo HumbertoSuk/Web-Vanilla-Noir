@@ -1,12 +1,16 @@
-// Detectar el tema del sistema
-const preferido = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-const temaGuardado = localStorage.getItem("tema") || preferido;
+const boton = document.getElementById("btn-tema");
 
-document.documentElement.setAttribute("data-theme", temaGuardado);
+function actualizarIcono() {
+  const tema = document.documentElement.getAttribute("data-theme");
+  boton.textContent = tema === "dark" ? "☀️" : "🌙";
+}
 
-document.getElementById("btn-tema").addEventListener("click", () => {
+actualizarIcono(); // al cargar la página
+
+boton.addEventListener("click", () => {
   const temaActual = document.documentElement.getAttribute("data-theme");
   const nuevoTema = temaActual === "dark" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", nuevoTema);
   localStorage.setItem("tema", nuevoTema);
+  actualizarIcono(); // cambiar icono después del click
 });

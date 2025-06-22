@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOIR - Contact</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+  <main class="contenido-principal">
+    <section class="tarjeta glass">
+      <h2 class="titulo-seccion">Contáctame</h2>
+      <p class="texto-glass">¿Tienes una idea, un proyecto o simplemente quieres saludar? Llena el formulario o escríbeme directamente.</p>
+      
+      <form class="contact-form glass" action="#" method="POST">
+        <label for="nombre" class="texto-glass">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+
+        <label for="correo" class="texto-glass">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required placeholder="tucorreo@ejemplo.com" />
+
+        <label for="mensaje" class="texto-glass">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje..."></textarea>
+
+        <button type="submit" class="boton-enviar">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Humberto. Todos los derechos reservados.</p>
+  </footer>
+
+  <button id="btn-tema">🌗</button>
+  <script src="js/loadComponents.js"></script>
+  <script src="js/darkmode.js"></script>
+</body>
+</html>
